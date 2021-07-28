@@ -1,0 +1,1077 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap');
+
+/*GENERAL*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /** Reset para REMS - 62.5% = 10px de 16px **/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+@media (min-width: 500px) {
+    body {
+        margin: 0;
+    }
+}
+
+
+a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 1.5rem;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+
+img{
+    max-width: 100%;
+}
+
+/*UTILIDADES*/
+
+.contenedor{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.seccion {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/*HEADER*/
+.encabezado{
+    background-image: url(../img/Encabezado.png);
+    padding: 1.5rem;
+    padding-left: 30rem;
+}
+.text-encabezado{
+    color: #0B178D;
+    background-color: #fff;
+    padding: 0.5rem;
+    border: 1px solid #44E80B;
+    border-radius: 8px;
+    font-size: 1.7rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo{
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+}
+
+.img-logo{
+   padding: 0 2.5rem;
+}    
+/*MENU*/
+.nav-bar{
+    background-color: #DEE1EA;
+    padding: 20px;
+    display: block;
+    color: #173CA9;
+    cursor: pointer;
+    width: 100%;
+}
+.menu, .submenu{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu{
+    background-color: #555;
+    width: 100%;
+    margin-left: -100%;
+}
+.menu__link {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.submenu{
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.submenu .menu__link{
+    background-color: #333;
+    padding-left: 40px;
+}
+.mostrar{
+    margin-left: 0;
+}
+
+@media(min-width: 1024px){
+    .encabezado{
+        background-image: url(../img/Encabezado.png);
+        margin: 0;
+        padding: 1.5rem;
+        padding-left: 110rem;
+        padding-bottom: 0.5rem;
+        background-position: center left;
+        display: flex;
+        justify-content: left;
+    }
+    
+    .text-encabezado{
+       color: #0B178D;
+       background-color: #fff;
+       padding: 0.5rem;
+       border: 1px solid #44E80B;
+       border-radius: 8px;
+       font-size: 1.7rem;
+       font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .logo{
+        background: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.8rem;
+    }
+    
+    .img-logo{
+       padding: 0 2.5rem;
+    }    
+
+    .nav-bar{
+        display: none;
+    }
+    .main-menu{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .menu{
+       margin-left: 0;
+       display: flex; 
+       background-color: #E8E5E5; 
+       color: #1A4F7C;
+       font-weight: bolder;
+       font-size: 1.7rem;
+    }
+    .menu__link{
+        color: #1A4F7C;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .container-submenu{
+        position: relative;
+    }
+    .submenu{
+        position: absolute;
+        top: 47px;
+        width: 200px;
+        overflow: visible;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .submenu__link {
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding-bottom: 0.7rem;
+        padding-top: 10px;
+    }
+    .submenu__link::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        border-bottom: 3px solid #AFB1B5;
+    }
+    .container-submenu:hover .submenu{
+        opacity: 1;
+        visibility: visible;
+    }
+    .comprobante{
+        display: flex;
+        justify-content: left;
+        font-size: 1.5rem;
+        color: #1A4F7C;
+        padding-right: 1.5rem;
+        padding-left: 70rem;
+    }
+}
+
+.email{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #1A4F7C;
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 0;
+    padding-right: 2rem;
+}
+
+/*BANNER*/
+.contenedor {
+    width: 98%;
+    margin: auto;
+}
+.banner{
+    background-image: url(../img/Banner.png);
+    background-position: center;
+    padding-top: 0;
+    margin-top: 0;
+    height: 100vh;
+    display: flexbox;
+    justify-content: center;
+}
+
+.title-banner{
+    font-size: 3rem;
+    color: #152776;
+    font-family: 'Oxygen', sans-serif;
+    padding: 1rem 2rem;
+}
+
+.banner-list{
+    font-size: 1.6rem;
+    padding: 2rem 0 0 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .banner-list li{
+     padding-bottom: 2rem;
+     justify-content: center;
+  }
+  
+  .icon {
+      display: flexbox;
+      justify-content: center;
+      color: #EB8611;
+      width: 30px;
+      height: 30px;
+  }
+
+  /*ERP*/
+
+.ERP {
+    display: block;
+    justify-content: center;
+    top: 0;
+    padding-top: 10rem;
+}
+
+.ERP-PYMES .ERP-MYPES .ERP-GEMPRESA{
+    flex-basis: calc(33.3% - 1rem);
+    text-align: center;
+}
+
+/*ERP MYPES*/
+
+.ERP-MYPES{
+  border: 2px solid #F5D420;
+  box-shadow: 0 1px 5px #B2B5B3;
+  margin: 2rem 6rem 2rem 10rem;
+}
+
+.title-mypes{
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #F5D420;
+}
+
+.list-mypes{
+    font-size: 1.8rem;
+    line-height: 2;
+    padding-left: 1rem;
+    padding-bottom: 2rem;
+    padding-right: 2rem;
+    list-style: circle;
+    list-style-position: inside;   
+}
+
+/*ERP PYMES*/
+
+.ERP-PYMES {
+    border: 2px solid #0CEE46;
+    box-shadow: 0 1px 5px #B2B5B3;
+    margin: 2rem 6rem 2rem 10rem;
+}
+  
+.title-pymes{
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 1rem;
+    color: #fff;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    background-color: #0CEE46;
+}
+  
+.list-pymes{
+    font-size: 1.8rem;
+    line-height: 2;
+    padding-left: 1rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    list-style: circle;
+    list-style-position: inside;
+}
+
+/*ERP G-EMPRESA*/
+
+.ERP-GEMPRESA {
+    border: 2px solid #C00CEC;
+    box-shadow: 0 1px 5px #B2B5B3;
+    margin: 2rem 6rem 2rem 10rem;
+}
+  
+.title-gempresa{
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    font-weight: bold;
+    color: #fff;
+    padding-bottom: 1rem;
+    background-color: #C00CEC;
+}
+  
+.list-gempresa {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    list-style: circle;
+    list-style-position: inside;
+}
+
+@media(min-width: 1024px){
+    
+.banner{
+    background-image: url(../img/Banner.png);
+    background-position: center;
+    height: 50vh;
+    display: block;
+    justify-content: center;
+}
+
+.title-banner{
+    font-size: 4rem;
+    color: #152776;
+    font-family: 'Oxygen', sans-serif;
+    padding: 1rem 0;
+}
+
+.banner-list{
+  font-size: 2rem;
+  padding: 1.7rem 0 0 4rem;
+}
+
+.banner-list li{
+   padding-bottom: 2rem;
+   justify-content: center;
+}
+
+.icon {
+    display: flexbox;
+    justify-content: center;
+}
+
+/*ERP*/
+
+.ERP {
+    display: flex;
+    justify-content: center;
+    flex-basis: calc(33.3% - 1rem);
+}
+
+.ERP-PYMES .ERP-MYPES .ERP-GEMPRESA{
+    flex-basis: calc(33.3% - 1rem);
+    text-align: center;
+}
+
+/*ERP MYPES*/
+
+.ERP-MYPES{
+  border: 2px solid #F5D420;
+  box-shadow: 0 1px 5px #B2B5B3;
+  margin-right: 2rem;
+}
+
+.title-mypes{
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    background-color: #F5D420;
+}
+
+.list-mypes{
+    font-size: 1.8rem;
+    line-height: 2;
+    padding-left: 1rem;
+    padding-bottom: 2rem;
+    padding-right: 2rem;
+    list-style: circle;
+    list-style-position: inside;   
+}
+
+/*ERP PYMES*/
+
+.ERP-PYMES {
+    border: 2px solid #0CEE46;
+    box-shadow: 0 1px 5px #B2B5B3;
+    margin-right: 2rem;
+}
+  
+.title-pymes{
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    background-color: #0CEE46;
+}
+  
+.list-pymes{
+    font-size: 1.8rem;
+    line-height: 2;
+    padding-left: 1rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    list-style: circle;
+    list-style-position: inside;
+}
+
+/*ERP G-EMPRESA*/
+
+.ERP-GEMPRESA {
+    border: 2px solid #C00CEC;
+    box-shadow: 0 1px 5px #B2B5B3;
+    margin-right: 2rem;
+}
+  
+.title-gempresa{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    padding-bottom: 1rem;
+    background-color: #C00CEC;
+}
+  
+.list-gempresa {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    padding-left: 1rem;
+    padding-right: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    list-style: circle;
+    list-style-position: inside;
+}
+}
+/*PRODUCTOS*/
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 6rem;
+    color: #ffffff;
+    text-align: center;
+    padding: 10rem;
+    padding-right: 130rem;
+    text-shadow: 2px 2px #bbbbbb;
+}
+
+.title-cotizacion {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5rem;
+    color: #ffffff;
+    text-align: center;
+    padding: 7rem;
+    padding-right: 70rem;
+    text-shadow: 2px 2px #bbbbbb;
+}
+/*CONTABILIDAD*/
+
+.banner-conta{
+  background: url(../img/Contabilidad.jpg);
+  background-position: center;
+  height: 50vh;
+  display: flexbox;
+  justify-content: center;
+}
+
+.contenedor-conta{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+.service-menu li a  {
+    display: block;
+    background: #F3F1F1;
+    padding: 7px;
+    margin-bottom: 6px;
+    color: #000000;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    font-size: 1.9rem;
+}
+
+.service-menu li a:hover {
+    background-color: #35CA10;
+}
+
+.widget, .sedebar-left{
+    margin-bottom: 40px;
+    border: 1px solid #f1f1f1;
+    padding: 25px;
+    color: #000;
+}
+
+.widget, .sedebar-left{
+    padding: 0;
+    border: none;
+}
+
+.service-menu {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 2rem;
+}
+
+.title-content-conta{
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 1.5rem;
+   background-color: #161C7C;
+   color: #fff;
+   text-align: center;
+   padding: 1rem 0;
+}
+
+.list-conta{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E8E5E5;
+    color: #161C7C;
+    border: 2px solid #161C7C;
+    padding: 1.2rem 1.5rem;
+    box-shadow: 0 1px 5px #B2B5B3;
+    font-size: 1.5rem;
+    list-style-position: inside;
+    margin-bottom: 0.5rem;
+    line-height: 2;
+}
+
+.datos {
+    margin-bottom: 40px;
+    border: 1px solid #f1f1f1;
+    padding: 25px;
+    margin-top: 4rem;
+    line-height: 2;
+}
+
+.title-datos-producto{ 
+   margin-bottom: 1.5rem;
+}
+
+.datos-nav {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 6rem;
+    font-family: 'Arial', sans-serif;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/*FINANZAS*/
+
+.banner-finanzas{
+    background: url(../img/Finanzas.jpg);
+    background-position: center;
+    height: 50vh;
+    display: flexbox;
+    justify-content: center;
+}
+
+.contenedor-finan{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+.service-menu li a  {
+    display: block;
+    background: #F3F1F1;
+    padding: 1.5rem 2rem;
+    margin-bottom: 6px;
+    color: #000000;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    font-size: 1.9rem;
+}
+
+.service-menu li a:hover {
+    background-color: #35CA10;
+}
+
+.service-menu li .active a {
+    background: #00B050;
+    color: #fff !important;
+}
+
+.widget, .sedebar-left{
+    margin-bottom: 40px;
+    border: 1px solid #f1f1f1;
+    padding: 30px;
+    color: #000;
+}
+
+.widget, .sedebar-left{
+    padding: 0;
+    border: none;
+}
+
+.service-menu {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 2rem;
+}
+
+.content-finanza {
+    margin: 0 4rem;
+}
+
+.title-content-finan{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    background-color: #161C7C;
+    color: #fff;
+    text-align: center;
+    padding: 0.8rem 0;
+}
+
+.list-finan {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E8E5E5;
+    color: #161C7C;
+    border: 2px solid #161C7C;
+    padding: 1.2rem 1.5rem;
+    box-shadow: 0 1px 5px #B2B5B3;
+    font-size: 1.5rem;
+    list-style-position: inside;
+    margin-bottom: 0.5rem;
+    line-height: 2;
+}
+
+.datos {
+    margin-bottom: 40px;
+    border: 1px solid #f1f1f1;
+    padding: 25px;
+    margin-top: 4rem;
+}
+
+
+.datos-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.datos-nav li {
+    display: block;
+    /*padding-bottom: 20px;*/
+    border-bottom: 1px dashed #EAEAEA;
+    margin-bottom: 20px;
+}
+
+.datos-nav li a {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 6rem;
+    font-family: 'Arial', sans-serif;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+
+.datos-nav li:last-child {
+    border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.datos > h2 {
+    font-size: 2rem;
+    margin: 0 4rem 0 0;
+    font-size: 24px;
+    position: relative;
+    margin: 0 0 30px;
+    padding-left: 15px;
+    border-left: 3px solid #ff5716;
+}
+
+.datos-nav > a {
+    margin: 0 0 4rem 0;
+}
+
+/*ALMACEN*/
+
+.banner-almacen{
+    background: url(../img/Almacen.jpg);
+    background-position: center;
+    height: 50vh;
+    display: flexbox;
+    justify-content: center;
+}
+
+.contenedor-alm {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+.service-menu li a  {
+    display: block;
+    background: #F3F1F1;
+    padding: 7px;
+    margin-bottom: 6px;
+    color: #000000;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    font-size: 1.9rem;
+}
+
+.service-menu li a:hover {
+    background-color: #35CA10;
+}
+
+.widget, .sedebar-left{
+    margin-bottom: 40px;
+    border: 1px solid #f1f1f1;
+    padding: 25px;
+    color: #000;
+}
+
+.widget, .sedebar-left{
+    padding: 0;
+    border: none;
+}
+
+.service-menu {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 2rem;
+}
+
+.title-content-alm {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 1.5rem;
+   background-color: #E5BA0D;
+   color: #fff;
+   text-align: center;
+   padding: 1rem 0;
+}
+
+.list-alm{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E8E5E5;
+    color: #161C7C;
+    border: 2px solid #E5BA0D;
+    padding: 1.2rem 1.5rem;
+    box-shadow: 0 1px 5px #B2B5B3;
+    font-size: 1.5rem;
+    list-style-position: inside;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.datos {
+    margin-bottom: 40px;
+    border: 1px solid #f1f1f1;
+    padding: 25px;
+    margin-top: 4rem;
+    line-height: 2;
+}
+
+.title-datos-producto{ 
+   margin-bottom: 1.5rem;
+}
+
+.datos-nav {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 6rem;
+    font-family: 'Arial', sans-serif;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/*COTIZACION Y PEDIDO*/
+
+.banner-cotizacion-pedido{
+    background: url(../img/Cotizacion-pedido.jpg);
+    background-position: center;
+    height: 50vh;
+    display: flexbox;
+    justify-content: center;
+}
+
+.contenedor-cotizacion{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+.service-menu li a  {
+    display: block;
+    background: #F3F1F1;
+    padding: 1.5rem 2rem;
+    margin-bottom: 6px;
+    color: #000000;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    font-size: 1.9rem;
+}
+
+.service-menu li a:hover {
+    background-color: #35CA10;
+}
+
+.service-menu li .active a {
+    background: #00B050;
+    color: #fff !important;
+}
+
+.widget, .sedebar-left{
+    margin-bottom: 40px;
+    border: 1px solid #f1f1f1;
+    padding: 30px;
+    color: #000;
+}
+
+.widget, .sedebar-left{
+    padding: 0;
+    border: none;
+}
+
+.service-menu {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 2rem;
+}
+
+.title-content-cotizacion {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+   background-color: #161C7C;
+   color: #fff;
+   text-align: center;
+    padding: 0.8rem 0;
+}
+
+.list-cotizacion {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E8E5E5;
+    color: #161C7C;
+    border: 2px solid #161C7C;
+    padding: 1.2rem 1.5rem;
+    box-shadow: 0 1px 5px #B2B5B3;
+    font-size: 1.5rem;
+    list-style-position: inside;
+    margin-bottom: 0.5rem;
+    line-height: 2;
+}
+
+
+.sedebar-right {
+    display: block;
+    float: right;
+    justify-content: space-between;
+}
+
+.datos {
+    margin-bottom: 40px;
+    border: 1px solid #f1f1f1;
+    padding: 25px;
+    margin-top: 4rem;
+}
+
+.datos-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.datos-nav li {
+    display: block;
+    /*padding-bottom: 20px;*/
+    border-bottom: 1px dashed #EAEAEA;
+    margin-bottom: 20px;
+}
+
+.datos-nav li a {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 6rem;
+    font-family: 'Arial', sans-serif;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.title-datos-producto{ 
+   margin-bottom: 1.5rem;
+}
+
+.datos-nav li:last-child {
+    border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.datos > h2 {
+    font-size: 2rem;
+    margin: 0 4rem 0 0;
+    font-size: 24px;
+    position: relative;
+    margin: 0 0 30px;
+    padding-left: 15px;
+    border-left: 3px solid #ff5716;
+}
+
+.datos-nav > a {
+    margin: 0 0 4rem 0;
+}
+
+/*LOGISTICA*/
+
+.banner-logistica{
+    background: url(../img/Logistica.jpg);
+    background-position: center;
+    height: 50vh;
+    display: flexbox;
+    justify-content: center;
+}
+
+.contenedor-logistica{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+.service-menu li a  {
+    display: block;
+    background: #F3F1F1;
+    padding: 7px;
+    margin-bottom: 6px;
+    color: #000000;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    font-size: 1.9rem;
+}
+
+.service-menu li a:hover {
+    background-color: #35CA10;
+}
+
+.widget, .sedebar-left{
+    margin-bottom: 40px;
+    border: 1px solid #f1f1f1;
+    padding: 25px;
+    color: #000;
+}
+
+.widget, .sedebar-left{
+    padding: 0;
+    border: none;
+}
+
+.service-menu {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 2rem;
+}
+
+.title-content-logistica{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    background-color: #67C10D;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+ }
+ 
+ .list-logis{
+     font-family: Arial, Helvetica, sans-serif;
+     background-color: #F6F6F6;
+     color: #161C7C;
+     border: 2px solid #67C10D;
+     padding: 1.2rem 1.5rem;
+     box-shadow: 0 1px 5px #B2B5B3;
+     font-size: 1.5rem;
+     list-style-position: inside;
+     margin-bottom: 0.5rem;
+     line-height: 2;
+ }
+ 
+ .datos {
+     margin-bottom: 40px;
+     border: 1px solid #f1f1f1;
+     padding: 25px;
+     margin-top: 4rem;
+     line-height: 2;
+ }
+ 
+ .title-datos-producto{ 
+    margin-bottom: 1.5rem;
+ }
+ 
+ .datos-nav {
+     font-size: 16px;
+     color: #000;
+     margin-bottom: 6rem;
+     font-family: 'Arial', sans-serif;
+     -webkit-transition: all 0.3s;
+     transition: all 0.3s;
+ }
