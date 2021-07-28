@@ -1,0 +1,21 @@
+ <a class="p-encabezado">Ventas y Consultoría: 943 433 457</a>
+
+ .p-encabezado{
+    display: inline-flex;
+    justify-content: right;
+    align-items: center;
+    color: #000;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 0.5rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevrons-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#EAB437" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <polyline points="7 7 12 12 7 17" />
+  <polyline points="13 7 18 12 13 17" />
+</svg>
